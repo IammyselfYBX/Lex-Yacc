@@ -58,10 +58,12 @@ int main(void)
 {
     extern int yyparse(void);
     extern FILE *yyin;
-
+    
+    printf("请输入需要计算的数值\n");
+    fflush(stdin);
     yyin = stdin;
     if (yyparse()) {
-        fprintf(stderr, "Error ! Error ! Error !\n");
+        fprintf(stderr, "Error! \n");
         exit(1);
     }
 }
