@@ -1,4 +1,4 @@
-name: cale
+name: mycale
 
 on: 
   push:
@@ -12,8 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
     - name: Install flex bison 
       run: sudo apt-get install flex bison -y
      -run : pwd
