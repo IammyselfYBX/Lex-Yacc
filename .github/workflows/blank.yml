@@ -15,7 +15,5 @@ jobs:
     - name: Install flex bison 
       run: sudo apt-get install flex bison -y
     - run: cd mycalc 
-    - name: compiler
-      run: make
-    - name: execute 
-      run: ./mycalc
+          make
+         ./mycalc
