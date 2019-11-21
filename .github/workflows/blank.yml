@@ -1,0 +1,23 @@
+name: cale
+
+on: 
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Install flex bison 
+      run: sudo apt-get install flex bison -y
+    - name: make
+      run: make
+    - run: echo success!
+    - name: cale
+      run: ./mycalc
