@@ -15,6 +15,7 @@ jobs:
     - name: Install flex bison 
       run: sudo apt-get install flex bison -y
     - run: pwd
+    - run: ls
     - run: make
     - run: echo success!
     - name: cale
