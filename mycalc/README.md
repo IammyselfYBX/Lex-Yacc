@@ -1,0 +1,7 @@
+### make
+```
+make
+```
+```
+make clean
+```
