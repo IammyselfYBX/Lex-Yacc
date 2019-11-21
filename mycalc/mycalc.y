@@ -60,7 +60,7 @@ int main(void)
     extern FILE *yyin;
     
     printf("请输入需要计算的数值\n");
-    getchar();
+    system("read -n 1");
     fflush(stdin);
     yyin = stdin;
     if (yyparse()) {
