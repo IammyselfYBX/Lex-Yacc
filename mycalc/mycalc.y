@@ -1,6 +1,7 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define YYDEBUG 1
 %}
 %union {        //6-9声明记号以及非终结符的类型
@@ -60,11 +61,17 @@ int main(void)
     extern FILE *yyin;
     
     printf("请输入需要计算的数值\n");
-    system("read -n 1");
+start:
     fflush(stdin);
     yyin = stdin;
+
+    if(4 == strlen(yyin)){
+        goto start;
+    }
+
     if (yyparse()) {
-        fprintf(stderr, "Error! \n");
+        fprintf(stderr, "Error!\n");
         exit(1);
     }
+
 }
